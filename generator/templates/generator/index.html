@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/primary.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="inner-section">
+
+        <h1>Password generator</h1>
+        <form action="{% url 'password' %}">
+          <div class="length-input">
+              <select name="length" id="length-selector">
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12" selected="selected">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+            </select> <p>Password length</p>
+            </div>
+          <div class="number-input">
+            <input type="checkbox" name="numbers" />  <p>Numbers</p>
+          </div>
+          <div class="number-input">
+            <input type="checkbox" name="uppercase" /> <p>Uppercase</p>
+          <div class="number-input">
+            <input type="checkbox" name="special" /> <p>Special characters</p> 
+          </div>
+          
+          <input type="submit" class="generate" value="Generate" />
+        </form>
+         
+          <a class="about-link about-link-home" href="{% url 'about' %}">About</a>
+
+      </div>
+    </section>
+  </body>
+</html>

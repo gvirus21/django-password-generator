@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/primary.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="inner-section">
+        <h1>About</h1>
+        <p class="about-description">
+          Greetings, This is Gourav &
+          <span class="hilight">
+            <a href="{% url 'home' %}">password-generator </a>
+          </span>
+          is my first Django based website. It can generate random passwords for
+          users based on their demands.Please make a good use of it & have fun
+          🥳
+        </p>
+        <div class="links">
+          <a class="home-link" href="{% url 'home' %}">Home</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
